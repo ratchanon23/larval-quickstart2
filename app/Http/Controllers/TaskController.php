@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Log;
 use App\Task;
 use App\Http\Requests;
 use Illuminate\Http\Request;
@@ -22,7 +23,8 @@ class TaskController extends Controller
     public function index(Request $request)
     {
         // $tasks = $request->user()->tasks()->get();
-
+        // Log::info(print_r($request->user()->tasks(), true));
+        Log::info($request->user());
         return view('tasks.index', [
             'tasks' => $this->tasks->forUser($request->user()),
         ]);
@@ -52,5 +54,10 @@ class TaskController extends Controller
     public function getReactTasks(Request $request)
     {
         return view('tasks.react_tasks');
+    }
+
+    public function testReact(Request $request)
+    {
+        return view('tasks.test_react');
     }
 }
