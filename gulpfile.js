@@ -16,7 +16,7 @@ require('laravel-elixir-vue-2');
 elixir(mix => {
     mix.sass('app.scss')
        .webpack('app.js');
-    mix.webpack('reactApp.js');
+    mix.webpack('reactFlux/fluxApp.js');
     mix.webpack('testReact.js');
-    mix.version(['js/reactApp.js']);
+    mix.version(['js/fluxApp.js']);
 });

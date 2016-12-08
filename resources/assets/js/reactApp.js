@@ -108,8 +108,7 @@ class TaskView extends Component {
   render() {
    return(
      <div>
-        <div><TaskHeader handleClic
-        k={this._handleAdd.bind(this)} /></div>
+        <div><TaskHeader handleClick={this._handleAdd.bind(this)} /></div>
         <div>
           <div className="panel panel-default">
             <div className="panel-heading">

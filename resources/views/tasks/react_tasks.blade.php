@@ -4,5 +4,5 @@
 
 <div id="app-container"></div>
 
-<script src="{{ elixir('js/reactApp.js') }}"></script>
+<script src="{{ elixir('js/fluxApp.js') }}"></script>
 @endsection
