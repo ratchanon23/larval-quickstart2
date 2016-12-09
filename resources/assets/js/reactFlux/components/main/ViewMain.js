@@ -45,7 +45,7 @@ class ViewMain extends Component {
   _handleDelete(taskId) {
     console.log("_handleDelete:" + taskId);
 
-    ActionMain.deleteTask(taskId);
+    ActionMain.deleteTask(taskId);   
   }
 
   _handleAdd(taskName) {

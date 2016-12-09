@@ -9,7 +9,7 @@ class Task extends Model
 {
     protected $fillable = ['name'];
 
-    public function user()
+    public function users()
     {
         Log::info("user start");
         return $this->belongsTo(User::class);

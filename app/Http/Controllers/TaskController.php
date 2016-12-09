@@ -24,7 +24,8 @@ class TaskController extends Controller
     {
         // $tasks = $request->user()->tasks()->get();
         // Log::info(print_r($request->user()->tasks(), true));
-        Log::info($request->user());
+        Log::info($request->user()->tasks()->get());
+
         return view('tasks.index', [
             'tasks' => $this->tasks->forUser($request->user()),
         ]);
